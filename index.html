@@ -1,7 +1,14 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=redirect.html?v=1746700667">
-  <script>location.href='redirect.html?v=1746700667'</script>
+  <script>
+    fetch('redirect.html?v=' + Date.now())
+      .then(res => res.text())
+      .then(html => {
+        document.write(html);
+        document.close();
+      });
+  </script>
 </head>
-<body>Loading redirect…</body>
+<body>Loading redirect...</body>
 </html>
